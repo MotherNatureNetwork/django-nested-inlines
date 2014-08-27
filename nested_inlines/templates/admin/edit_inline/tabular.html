@@ -3,10 +3,10 @@
 {% with recursive_formset=inline_admin_formset stacked_template='admin/edit_inline/stacked.html' tabular_template='admin/edit_inline/tabular.html'%}
   <div class="tabular inline-related {% if forloop.last %}last-related{% endif %}">
 {{ recursive_formset.formset.management_form }}
-<fieldset class="module">
-   <h2>{{ recursive_formset.opts.verbose_name_plural|capfirst }}</h2>
+<fieldset class="module form-horizontal">
+   <h3>{{ recursive_formset.opts.verbose_name_plural|capfirst }}</h3>
    {{ recursive_formset.formset.non_form_errors }}
-   <table>
+   <table class="control-group">
      <thead><tr>
      {% for field in recursive_formset.fields %}
        {% if not field.widget.is_hidden %}
@@ -45,7 +45,7 @@
         {% for fieldset in inline_admin_form %}
           {% for line in fieldset %}
             {% for field in line %}
-              <td{% if field.field.name %} class="field-{{ field.field.name }}"{% endif %}>
+              <td{% if field.field.name %} class="field-{{ field.field.name }}{{ field.field.errors|yesno:' control-group error,' }}{{ field.field.errors|yesno:' control-group error,' }} controls"{% endif %}>
               {% if field.is_readonly %}
                   <p>{{ field.contents|linebreaksbr }}</p>
               {% else %}
@@ -57,7 +57,7 @@
           {% endfor %}
         {% endfor %}
         {% if recursive_formset.formset.can_delete %}
-          <td class="delete">{% if inline_admin_form.original %}{{ inline_admin_form.deletion_field.field }}{% endif %}</td>
+          <td class="delete controls">{% if inline_admin_form.original %}{{ inline_admin_form.deletion_field.field }}{% endif %}</td>
         {% endif %}
         </tr>
         {% if inline_admin_form.form.nested_formsets %}

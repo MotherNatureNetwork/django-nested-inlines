@@ -159,11 +159,6 @@ fieldset.monospace textarea {
 /* SUBMIT ROW */
 
 .submit-row {
-    padding: 5px 7px;
-    text-align: right;
-    background: white url(../img/nav-bg.gif) 0 100% repeat-x;
-    border: 1px solid #ccc;
-    margin: 5px 0;
     overflow: hidden;
 }
 
@@ -238,7 +233,6 @@ body.popup .submit-row {
 
 .inline-group {
     padding: 0;
-    border: 1px solid #ccc;
     margin: 10px 0;
 }
 
@@ -252,11 +246,7 @@ body.popup .submit-row {
 
 .inline-related h3 {
     margin: 0;
-    color: #666;
     padding: 3px 5px;
-    font-size: 11px;
-    background: #e1e1e1 url(../img/nav-bg.gif) top left repeat-x;
-    border-bottom: 1px solid #ddd;
 }
 
 .inline-related h3 span.delete {
@@ -270,24 +260,12 @@ body.popup .submit-row {
 
 .inline-related fieldset {
     margin: 0;
-    background: #fff;
     border: none;
     width: 100%;
 }
 
-.inline-related fieldset.module h3 {
-    margin: 0;
-    padding: 2px 5px 3px 5px;
-    font-size: 11px;
-    text-align: left;
-    font-weight: bold;
-    background: #bcd;
-    color: #fff;
-}
-
 .inline-group .tabular > fieldset.module {
     border: none;
-    border-bottom: 1px solid #ddd;
 }
 
 .inline-related.tabular fieldset.module table {
@@ -296,6 +274,11 @@ body.popup .submit-row {
 
 .last-related fieldset {
     border: none;
+}
+
+.inline-group td input[type=checkbox] {
+    text-align: center;
+
 }
 
 .inline-group .tabular tr.has_original td {
@@ -340,7 +323,6 @@ body.popup .submit-row {
 .inline-group .tabular tr.add-row td {
     color: #666;
     padding: 3px 5px;
-    border-bottom: 1px solid #ddd;
     background: #e1e1e1 url(../img/nav-bg.gif) top left repeat-x;
 }
 
@@ -364,18 +346,6 @@ body.popup .submit-row {
 
 td > .nested-inline {
 	margin: 0px;
-}
-
-.nested-inline-bottom-border {
-	border-bottom: 1px solid #DDDDDD;
-}
-
-.no-bottom-border.row1 > td {
-	border-bottom: solid #EDF3FE 1px;
-}
-
-.no-bottom-border.row2 > td {
-	border-bottom: solid white 1px;
 }
 
 .empty-form {
