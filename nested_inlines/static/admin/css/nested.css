@@ -5,7 +5,6 @@
 .form-row {
     overflow: hidden;
     padding: 8px 12px;
-    font-size: 11px;
     border-bottom: 1px solid #eee;
 }
 
@@ -14,8 +13,7 @@
 }
 
 form .form-row p {
-    padding-left: 0;
-    font-size: 11px;
+
 }
 
 /* FORM LABELS */
@@ -27,9 +25,7 @@ form h4 {
 }
 
 label {
-    font-weight: normal !important;
-    color: #666;
-    font-size: 12px;
+
 }
 
 .required label, label.required {
@@ -61,10 +57,7 @@ form ul.inline li {
 /* ALIGNED FIELDSETS */
 
 .aligned label {
-    display: block;
-    padding: 3px 10px 0 0;
-    float: left;
-    width: 8em;
+
 }
 
 .aligned ul label {
@@ -78,8 +71,7 @@ form ul.inline li {
 }
 
 form .aligned p, form .aligned ul {
-    margin-left: 7em;
-    padding-left: 30px;
+
 }
 
 form .aligned table p {
@@ -107,26 +99,7 @@ form .aligned p.help {
 }
 
 fieldset .field-box {
-    float: left;
-    margin-right: 20px;
-}
 
-/* WIDE FIELDSETS */
-
-.wide label {
-    width: 15em !important;
-}
-
-form .wide p {
-    margin-left: 15em;
-}
-
-form .wide p.help {
-    padding-left: 38px;
-}
-
-.colM fieldset.wide .vLargeTextField, .colM fieldset.wide .vXMLLargeTextField {
-    width: 450px;
 }
 
 /* COLLAPSED FIELDSETS */
@@ -237,7 +210,7 @@ body.popup .submit-row {
 }
 
 .inline-group .aligned label {
-    width: 8em;
+
 }
 
 .inline-related {
